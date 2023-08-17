@@ -3,7 +3,7 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
+require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "TropipayJS Documentation",
@@ -11,10 +11,10 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://github.com/yosletpp/tropipayjs-docs",
+  url: "https://github.com/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/yosle/tropipayjs-docs/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
