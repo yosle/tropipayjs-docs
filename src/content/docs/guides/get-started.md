@@ -7,7 +7,7 @@ So, do you want to start receiving internacional payments with Tropipay...You ca
 
 TropiPay is an electronic wallet that allows you to execute the most common financial operations of the day to day. This is SDK for Typescript and Javacript that helps you build integrations with the Tropipay platform in an easier way. Can save you a lot of time and effort implementing all the API features. You can use this library with CommonJS system (node + express) or ES6 module system (NextJS).
 
-## Getting the help you can
+## Getting the help you need
 
 It's allways a good idea to make extensive test on your integration. So
 we recommend to use the sandbox for testing your integration. This test environment doesn't use real money and you can safely test the API endpoint whihout any risk. [The test environment is accesible here](/https://www.tropipay-dev.herokuapp.com/).
