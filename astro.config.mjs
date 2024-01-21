@@ -4,7 +4,7 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "https://yosle.github.io",
-  base: "/tropipayjs-docs",
+  base: "/tropipayjs-docs/docs",
 
   integrations: [
     starlight({
