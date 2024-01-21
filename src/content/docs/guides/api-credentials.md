@@ -9,21 +9,21 @@ To use the API, you need a client ID and client secret, which you can obtain by 
 
 ### Login into your account and click in the App Menu
 
-![App Menu](/images/cred1.png)
+![App Menu](/tropipayjs-docs/images/cred1.png)
 
 ### Go to Applications and Credentials
 
-![Application and credetials menu](/images/cred2.png)
+![Application and credetials menu](/tropipayjs-docs/images/cred2.png)
 
 ### Create a new API key
 
-![new API key](/images/cred3.png)
+![new API key](/tropipayjs-docs/images/cred3.png)
 
 ### Setting up your Application
 
 This is a Businness account, so there's some minor differences to the personal account options. But they are mostly self explanatory.
 
-![Setting up your App](/images/cred4.png)
+![Setting up your App](/tropipayjs-docs/images/cred4.png)
 
 ### Permisions
 
@@ -33,4 +33,4 @@ Permisions are the API Scopes they determine the specific permissions an applica
 As a rule of thumb, you should set the minimum permisions required for your app to properly function.
 :::
 
-![Permisions](/images/cred5.png)
+![Permisions](/tropipayjs-docs/images/cred5.png)
