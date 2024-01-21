@@ -20,11 +20,11 @@ export default defineConfig({
             { label: "Introduction", link: "/tropipayjs-docs/guides/intro/" },
             {
               label: "Setup Credentials",
-              link: "/tropipayjs-docs/guides/api-credentials/",
+              link: "/guides/api-credentials/",
             },
             {
               label: "Installation",
-              link: "/tropipayjs-docs/guides/installation",
+              link: "/guides/installation",
             },
           ],
         },
@@ -33,11 +33,11 @@ export default defineConfig({
           items: [
             {
               label: "Tropipay Class",
-              link: "/tropipayjs-docs/reference/tropipay-class",
+              link: "/reference/tropipay-class",
             },
             {
               label: "PaymentCard Class",
-              link: "/tropipayjs-docs/reference/paymentcards",
+              link: "/reference/paymentcards",
             },
           ],
           // autogenerate: { directory: "reference" },
