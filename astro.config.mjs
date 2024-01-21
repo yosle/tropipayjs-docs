@@ -22,6 +22,10 @@ export default defineConfig({
               label: "Setup Credentials",
               link: "/tropipayjs-docs/guides/api-credentials/",
             },
+            {
+              label: "Installation",
+              link: "/tropipayjs-docs/guides/installation",
+            },
           ],
         },
         {

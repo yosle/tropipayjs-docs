@@ -1,5 +1,5 @@
 ---
-title: Seting up your credentials
+title: Setting up your credentials
 description: Seting up your account credentials.
 ---
 

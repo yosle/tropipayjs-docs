@@ -11,12 +11,18 @@ So, I whipped up this SDK to make life easier for anyone diving into the world o
 
 It's always a good idea to conduct extensive tests on your integration. Therefore, I recommend using the sandbox for testing your integration. This test environment doesn't involve real money, and you can safely test the API endpoint without any risk. [The test environment is accesible here](/https://www.tropipay-dev.herokuapp.com/).
 
-The test environment is completely independent of the real Tropipay API. Credentials created in the test environment can't be used in the Tropipay API, and vice versa.
-
 :::caution[A Note about test environment accounts]
 Often, these test accounts require some extra configuration to work properly, like funds, and they can be blocked occasionally. It's always a good idea to contact the Tropipay Developers Support before conducting any tests. They can provide you with an already set-up test account if needed.
+:::
+
+The test environment is completely independent of the real Tropipay API. Credentials created in the test environment can't be used in the Tropipay API, and vice versa.
+
+:::tip[2FA in test environment]
+In the test environment, no 2FA SMS is sent to you. The confirmation code is always 12345.
 :::
 
 :::tip[Tropipay Developers Support]
 [Developers Support Group in Telegram](/https://t.me/joinchat/SeivjlObx8-JJ8cY7FFn2A/)
 :::
+
+Once you have an account in the test environment or a live account, you can initiate the process of obtaining your API client ID and client secret.

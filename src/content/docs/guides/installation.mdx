@@ -1,0 +1,29 @@
+---
+title: Installation
+description: Setting up your account credentials.
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+Install the SDK using your favorite package manager
+
+<Tabs>
+  <TabItem label="npm">
+    <code>npm install @yosle/tropipayjs</code>
+  </TabItem>
+  <TabItem label="yarn">
+    <code>yarn add @yosle/tropipayjs</code>
+  </TabItem>
+  <TabItem label="pnpm">
+    <code>pnpm install @yosle/tropipayjs</code>
+  </TabItem>
+</Tabs>
+
+## The Tropipay Class Instance
+
+The Tropipay instance, allows you to access all the method available in the API.
+This Object is meant to be used only in server side.
+Do not use the Tropipay object on the client side (browser).
+This would expose your app credentials (the client secret of your account).
+You can create an endpoint at your back-end using express and consume it in your front-end,
+or use SSR if you're using NextJS.
