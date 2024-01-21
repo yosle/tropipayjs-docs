@@ -7,7 +7,7 @@ TropiPay is an electronic wallet that allows you to perform the most common fina
 
 So, I whipped up this SDK to make life easier for anyone diving into the world of Tropipay's API. Integrating with APIs can be a bit of a headache, right? Well, I've been there, done that, and thought, "Why not simplify this process?" That's where this SDK comes in handy. It's designed in Typescript and JavaScript to lend you a hand in effortlessly building connections with Tropipay's platform. Trust me, it's a time-saver, sparing you the hassle of wrestling with complex API features. Whether you're rocking the CommonJS system or rolling with the ES6 module system, this SDK's got your back. So, buckle up and enjoy the smooth ride of integration without the usual headaches! 🚀
 
-## Getting the Help You Need
+## Getting all the Help You Can
 
 It's always a good idea to conduct extensive tests on your integration. Therefore, I recommend using the sandbox for testing your integration. This test environment doesn't involve real money, and you can safely test the API endpoint without any risk. [The test environment is accesible here](/https://www.tropipay-dev.herokuapp.com/).
 
