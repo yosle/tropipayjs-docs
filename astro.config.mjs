@@ -11,16 +11,26 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Guides",
+          label: "Getting started",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Get Started", link: "/guides/get-started/" },
+            { label: "Introduction", link: "/guides/intro/" },
             { label: "Setup Credentials", link: "/guides/api-credentials/" },
           ],
         },
         {
           label: "Reference",
-          autogenerate: { directory: "reference" },
+          items: [
+            {
+              label: "Tropipay Class",
+              link: "/reference/tropipay-class",
+            },
+            {
+              label: "PaymentCard Class",
+              link: "/reference/paymentcards",
+            },
+          ],
+          // autogenerate: { directory: "reference" },
         },
       ],
     }),

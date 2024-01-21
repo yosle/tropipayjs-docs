@@ -1,0 +1,45 @@
+---
+title: Paymentcard class
+description: Tropipayjs Library Reference Documentation
+---
+
+## Overview
+
+The `PaymentCard` class is part of the Tropipay API library and provides functionalities related to payment cards.
+
+## Class: PaymentCard
+
+### Constructor
+
+#### `constructor(tropipayInstance: Tropipay)`
+
+Creates an instance of the `PaymentCard` class, associated with a Tropipay instance.
+
+- `tropipayInstance`: An instance of the `Tropipay` class.
+
+### Methods
+
+#### `create(payload: PaymentLinkPayload): Promise<PaymentLink>`
+
+Creates a payment link with the specified options.
+
+- `payload`: PaymentLinkPayload object.
+- Returns a promise with a `PaymentLink` or throws an exception.
+- [API Documentation](https://tpp.stoplight.io/docs/tropipay-api-doc/b3A6ODgyNTM3OQ-create-a-new-pay-link-charge)
+
+#### `list(): Promise<any>`
+
+Shows a list of stored payment cards created by the user. This list includes active and closed pay links.
+
+- Returns an array of payment links.
+- Throws an error if the payment card list cannot be retrieved.
+
+#### `get(id: string): Promise<any>`
+
+Retrieves information about a specific payment card.
+
+- `id`: ID of the payment card.
+- Returns information about the specified payment card.
+- Throws an error if the payment card information cannot be retrieved.
+
+---

@@ -3,7 +3,7 @@ title: Seting up your credentials
 description: Seting up your account credentials.
 ---
 
-To use the API you need a client ID and client secret, you can get those creating an "App credential". You can follow the same steps in the test environment and the real Tropipay App, just remember being careful with your real account 😉 :
+To use the API, you need a client ID and client secret, which you can obtain by creating an 'App credential.' You can follow the same steps in both the test environment and the real Tropipay App, just remember to be careful with your real account 😉.
 
 ## Setting up your credentials
 
@@ -30,7 +30,7 @@ This is a Businness account, so there's some minor differences to the personal a
 Permisions are the API Scopes they determine the specific permissions an application has. They are crucial for restricting access to only necessary actions, enhancing security. Minimizing the risk of unauthorized access or data misuse.
 
 :::tip[What permission should I include?]
-As a rule of thumb, for security reasons you should set the minimum permisions required for your app to properly function.
+As a rule of thumb, you should set the minimum permisions required for your app to properly function.
 :::
 
 ![Permisions](/images/cred5.png)
