@@ -3,7 +3,7 @@ title: Setting up your credentials
 description: Seting up your account credentials.
 ---
 
-To use the API, you need a client ID and client secret, which you can obtain by creating an 'App credential.' You can follow the same steps in both the test environment and the real Tropipay App, just remember to be careful with your real account 😉.
+To use the API, you need a client ID and client secret, which you can obtain by creating an `App credential` You can follow the same steps in both the test environment and the real Tropipay App, just remember to be careful with your real account 😉.
 
 ## Setting up your credentials
 

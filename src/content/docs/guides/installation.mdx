@@ -19,11 +19,44 @@ Install the SDK using your favorite package manager
   </TabItem>
 </Tabs>
 
-## The Tropipay Class Instance
+### Initialize the Tropipay class
 
+You can instantiate the Tropipay class passing the client Id,
+client secret and optionally the serverMode parameter,
+if no serverMode is provided, `Development` will be used as default.
+Make sure you use the [test environment](https://tropipay-dev.herokuapp.com) credentials when serverMode is on `Development`.
+
+```javascript
+// test environment server tropipay-dev.herokuapp.com
+const config = {
+    clientId: process.env.TROPIPAY_CLIENT_ID,
+    clientSecret: process.env.TROPIPAY_CLIENT_SECRET
+    serverMode: 'Development' // it will be used as default if omited
+}
+const tpp = new Tropipay(config)
+```
+
+:::caution[Note]
+To use your live credentials (real account) you must explicity set serverMode to `Production`.
+:::
+
+Using Production environment:
+
+```javascript
+//real account credentials
+const config = {
+  clientId: process.env.TROPIPAY_CLIENT_ID,
+  clientSecret: process.env.TROPIPAY_CLIENT_SECRET,
+  serverMode: "Production", //live account
+};
+const tpp = new Tropipay(config);
+```
+
+:::caution[Important]
 The Tropipay instance, allows you to access all the method available in the API.
 This Object is meant to be used only in server side.
 Do not use the Tropipay object on the client side (browser).
 This would expose your app credentials (the client secret of your account).
 You can create an endpoint at your back-end using express and consume it in your front-end,
 or use SSR if you're using NextJS.
+:::

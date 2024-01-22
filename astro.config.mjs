@@ -26,6 +26,10 @@ export default defineConfig({
               label: "Installation",
               link: "/guides/installation",
             },
+            {
+              label: "Using Payment cards",
+              link: "/guides/paymentcards",
+            },
           ],
         },
         {
