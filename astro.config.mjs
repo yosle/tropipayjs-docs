@@ -43,6 +43,10 @@ export default defineConfig({
               label: "PaymentCard Class",
               link: "/reference/paymentcards/",
             },
+            {
+              label: "ServerSideUtils Class",
+              link: "/reference/serversideutils/",
+            },
           ],
           // autogenerate: { directory: "reference" },
         },

@@ -1,6 +1,6 @@
 ---
 title: Using PaymentCards
-description: Setting upcredentials your account
+description: Setting up credentials your account
 ---
 
 # Receiving payments with payment cards
