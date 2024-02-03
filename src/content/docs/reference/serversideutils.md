@@ -60,4 +60,9 @@ Gets the base64 representation of a remote file from the given URL.
 Checks if the base64 string represents a valid image and has a valid size.
 
 - **Parameters:**
+
   - `base64Image`: Base64 image to be validated
+
+  :::tip[Tip]
+  Found something you'd like to improve? Let us know! Head over to our GitHub repository and submit your suggestions or pull requests. Your contributions make our documentation even better!
+  :::

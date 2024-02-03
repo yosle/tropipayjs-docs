@@ -1,5 +1,5 @@
 ---
-title: Using PaymentCards
+title: Creating Payment cards
 description: Setting up credentials your account
 ---
 
@@ -79,3 +79,7 @@ TropipaJS will throw an exception and wont create the paymentcard if a image siz
 ## Further reading
 
 Please refer to the Official Payment cards [Documentation](https://tpp.stoplight.io/docs/tropipay-api-doc/fa7bde61f971b-create-payment-card)
+
+:::tip[Tip]
+Found something you'd like to improve? Let us know! Head over to our GitHub repository and submit your suggestions or pull requests. Your contributions make our documentation even better!
+:::

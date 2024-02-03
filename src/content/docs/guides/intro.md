@@ -26,3 +26,7 @@ In the test environment, no 2FA SMS is sent to you. The confirmation code is alw
 :::
 
 Once you have an account in the test environment or a live account, you can initiate the process of obtaining your API client ID and client secret.
+
+:::tip[Tip]
+Found something you'd like to improve? Let us know! Head over to our GitHub repository and submit your suggestions or pull requests. Your contributions make our documentation even better!
+:::

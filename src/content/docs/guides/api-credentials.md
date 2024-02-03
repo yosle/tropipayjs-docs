@@ -34,3 +34,7 @@ As a rule of thumb, you should set the minimum permisions required for your app 
 :::
 
 ![Permisions](/tropipayjs-docs/images/cred5.png)
+
+:::tip[Tip]
+Found something you'd like to improve? Let us know! Head over to our GitHub repository and submit your suggestions or pull requests. Your contributions make our documentation even better!
+:::

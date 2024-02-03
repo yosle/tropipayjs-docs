@@ -26,9 +26,18 @@ export default defineConfig({
               label: "Installation",
               link: "/guides/installation",
             },
+          ],
+        },
+        {
+          label: "Making the Integration",
+          items: [
             {
-              label: "Using Payment cards",
+              label: "Creating Payment cards",
               link: "/guides/paymentcards",
+            },
+            {
+              label: "Verifying with notificationUrl",
+              link: "/guides/verifying-payments",
             },
           ],
         },
