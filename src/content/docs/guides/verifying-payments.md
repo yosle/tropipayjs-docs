@@ -23,7 +23,7 @@ Always verify the signature of the payload to ensure it originates from Tropipay
 This apply for notificationUrl and hooks the same. keep logs of every callback received so you have an audit trail, documenting transaction detail. Logs facilitate debugging by providing insights into payment failures or discrepancies. Services like Papertrail or Loggly can slurp up your logs, giving you a centralized spot to peek at 'em.
 :::
 
-Example of a success notificationUrl payload:
+## Example of a success notificationUrl payload
 
 ```json
 {
@@ -141,6 +141,115 @@ Example of a success notificationUrl payload:
     }
   }
 }
+```
+
+## Example with Express
+
+```javascript
+const express = require("express");
+const bodyParser = require("body-parser");
+const { ServerSideUtils } = require("@yosle/tropipayjs");
+
+const PORT = process.env.APP_PORT;
+const TROPIPAY_CLIENT_ID = process.env.TROPIPAY_CLIENT_ID;
+const TROPIPAY_CLIENT_SECRET = process.env.TROPIPAY_CLIENT_SECRET;
+
+const app = express();
+app.use(bodyParser.json());
+
+const tpp = new Tropipay({
+  clientId: TROPIPAY_CLIENT_ID,
+  clientSecret: TROPIPAY_CLIENT_SECRET,
+});
+
+app.post("/webhook", (req, res) => {
+  // Process the received data
+  console.log("Received webhook payload:", req.body);
+  const { status, data } = req.body;
+  const isVerifiedPayload = ServerSideUtils.verifySignature(
+    {
+      clientId: TROPIPAY_CLIENT_ID,
+      clientSecret: TROPIPAY_CLIENT_SECRET,
+    },
+    data.originalCurrencyAmount,
+    data.bankOrderCode,
+    data.signaturev2
+  );
+
+  if (!isVerifiedPayload) {
+    // maybe use a logger like winston
+    console.error("Invalid signature");
+
+    // if you provide
+    return res.status(400).json({
+      message: "Invalid signature",
+    });
+  }
+
+  try {
+    // Save and process asynchronously the payment here
+    // update database, etc. if you have some long blocking operations
+    // at this point. better use workers, queues, etc
+  } catch (err) {
+    // ...
+  } finally {
+    return res.status(200).send("Webhook received successfully");
+  }
+
+  // Send a response ASAP
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+```
+
+## Example Nextjs api endpoint with Typescript
+
+```typescript
+import type { NextApiRequest, NextApiResponse } from "next";
+import { ServerSideUtils, Tropipay } from "@yosle/tropipayjs";
+
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  if (req.method === "POST") {
+    const { status, data } = req.body;
+    const TROPIPAY_CLIENT_ID: string = process.env.TROPIPAY_CLIENT_ID || "";
+    const TROPIPAY_CLIENT_SECRET: string =
+      process.env.TROPIPAY_CLIENT_SECRET || "";
+
+    const isVerifiedPayload: boolean = ServerSideUtils.verifySignature(
+      {
+        clientId: TROPIPAY_CLIENT_ID,
+        clientSecret: TROPIPAY_CLIENT_SECRET,
+      },
+      data.originalCurrencyAmount,
+      data.bankOrderCode,
+      data.signaturev2
+    );
+
+    if (!isVerifiedPayload) {
+      console.error("Invalid signature");
+      return res.status(400).json({ message: "Invalid signature" });
+    }
+
+    try {
+      // Save and process asynchronously the payment here
+      // update database, etc. if you have some long blocking operations
+      // at this point. better use workers, queues, etc
+    } catch (err) {
+      // Handle error
+      console.error(err);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+
+    return res.status(200).send("Webhook received successfully");
+  } else {
+    return res.status(405).json({ message: "Method Not Allowed" });
+  }
+};
+
+export default handler;
 ```
 
 Preferably, your endpoint returns a status 200 OK as soon as possible. Then, process the payload asynchronously. Any other status code or lack of response from your notificationUrl (timeout) will be interpreted as a failure to receive the callback correctly. Tropipay will attempt redelivery at intervals until the webhook returns a status 200.
