@@ -55,6 +55,10 @@ Using Production environment:
 const config = {
   clientId: process.env.TROPIPAY_CLIENT_ID,
   clientSecret: process.env.TROPIPAY_CLIENT_SECRET,
+  // Optionally you can request wich scopes of the credential are you gonna use.
+  // this should be a subset of the scopes marked for this credential.
+  // trying to use a scope that is not set for the credential will throw error
+  // on authentication. Note: if no scopes array is passed ALL scopes are requested!
   scopes:[
     'ALLOW_GET_PROFILE_DATA',
     'ALLOW_PAYMENT_IN',
