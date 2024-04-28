@@ -21,19 +21,27 @@ Install the SDK using your favorite package manager
 
 ### Initialize the Tropipay class
 
-You can instantiate the Tropipay class passing the client Id,
-client secret and optionally the serverMode parameter,
+You can instantiate the Tropipay class passing the `client_Id`,
+`client_secret`, `scopes` and optionally the serverMode parameter,
 if no serverMode is provided, `Development` will be used as default.
 Make sure you use the [test environment](https://tropipay-dev.herokuapp.com) credentials when serverMode is on `Development`.
 
 ```javascript
 // test environment server tropipay-dev.herokuapp.com
 const config = {
-    clientId: process.env.TROPIPAY_CLIENT_ID,
-    clientSecret: process.env.TROPIPAY_CLIENT_SECRET
-    serverMode: 'Development' // it will be used as default if omited
-}
-const tpp = new Tropipay(config)
+  clientId: process.env.TROPIPAY_CLIENT_ID,
+  clientSecret: process.env.TROPIPAY_CLIENT_SECRET,
+  scopes: [
+    "ALLOW_GET_PROFILE_DATA",
+    "ALLOW_PAYMENT_IN",
+    "ALLOW_EXTERNAL_CHARGE",
+    "KYC3_FULL_ALLOW",
+    "ALLOW_GET_BALANCE",
+    "ALLOW_GET_MOVEMENT_LIST",
+  ],
+  serverMode: "Development", // it will be used as default if omited
+};
+const tpp = new Tropipay(config);
 ```
 
 :::caution[Note]
@@ -47,6 +55,13 @@ Using Production environment:
 const config = {
   clientId: process.env.TROPIPAY_CLIENT_ID,
   clientSecret: process.env.TROPIPAY_CLIENT_SECRET,
+  scopes:[
+    'ALLOW_GET_PROFILE_DATA',
+    'ALLOW_PAYMENT_IN',
+    'ALLOW_EXTERNAL_CHARGE',
+    'KYC3_FULL_ALLOW',
+    'ALLOW_GET_BALANCE',
+    'ALLOW_GET_MOVEMENT_LIST']
   serverMode: "Production", //live account
 };
 const tpp = new Tropipay(config);
