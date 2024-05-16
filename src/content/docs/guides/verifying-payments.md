@@ -7,6 +7,10 @@ description: How to verify a payment has been made
 
 One of the most important aspects of any integration is the ability to verify that a successful payment has been made. The method for doing so and the amount of information you receive may vary depending on how your account receives funds. Tropipay provides multiple ways of receiving payments; payment cards are one option, perhaps most suitable for websites. However, there's also the option of sharing your profile (which generates a special payment card allowing clients to specify the amount) or internal transfers from another Tropipay account. There are differences between these methods in terms of fees, and you might want to choose one over the other, or even a combination of different ones.
 
+:::tip[There's another way]
+Check the [Hooks section](/tropipayjs-docs/guides/hooks/) for more detailed info about how to verify payments using hook events.
+:::
+
 ## Using Paymentcards and notificationUrl
 
 :::caution[Note]

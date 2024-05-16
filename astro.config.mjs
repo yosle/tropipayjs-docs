@@ -39,6 +39,10 @@ export default defineConfig({
               label: "Verifying with notificationUrl",
               link: "/guides/verifying-payments",
             },
+            {
+              label: "Receiving events via Hooks",
+              link: "/guides/hooks",
+            },
           ],
         },
         {
