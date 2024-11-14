@@ -18,7 +18,7 @@ Often, these test accounts require some extra configuration to work properly, li
 The test environment is completely independent of the real Tropipay API. Credentials created in the test environment can't be used in the Tropipay API, and vice versa.
 
 :::tip[2FA in test environment]
-In the test environment, no 2FA SMS is sent to you. The confirmation code is always 12345.
+In the test environment, no 2FA SMS is sent to you. The confirmation code is always 123456.
 :::
 
 :::tip[Tropipay Developers Support]
